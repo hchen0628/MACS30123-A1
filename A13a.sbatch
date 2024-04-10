@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#SBATCH --job-name=gpu_ndvi
-#SBATCH --output=gpu_ndvi.out
-#SBATCH --error=gpu_ndvi.err
+#SBATCH --job-name=A13a
+#SBATCH --output=A13a.out
+#SBATCH --error=A13a.err
 #SBATCH --nodes=1              # Request 1 GPU node
 #SBATCH --ntasks-per-node=1    # Request 1 task per GPU node
 #SBATCH --partition=gpu        # Specify the GPU partition
@@ -12,4 +12,4 @@
 
 module load cuda python
 
-python3 "/home/hchen0628/MACS30123-A1/123 3a.py" >> gpu_ndvi.out
+python3 "/home/hchen0628/MACS30123-A1/A13a.py" >> A13a.out
