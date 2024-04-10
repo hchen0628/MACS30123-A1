@@ -18,6 +18,8 @@ def simulate_lifetime(eps_mat, rho, mu, sigma, z_0, T, S):
                 periods_to_negative[s_ind] = t_ind + 1
                 break
             z_tm1 = z_t
+        if periods_to_negative[s_ind] == 0:
+            periods_to_negative[s_ind] = T
     return periods_to_negative
 
 if __name__ == "__main__":
