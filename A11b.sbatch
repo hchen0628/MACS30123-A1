@@ -12,5 +12,5 @@
 
 for i in {1..20}
 do
-    mpirun -n $i A11b.py >> A11b.out
+    mpirun -n $i "/home/hchen0628/MACS30123-A1/A11b.py" >> A11b.out
 done
