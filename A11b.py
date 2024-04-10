@@ -34,7 +34,7 @@ if __name__ == "__main__":
     S, T = 1000 // size, 4160
 
     # Different seeds for each process
-    np.random.seed(rank)
+    np.random.seed(25)
     eps_mat = sts.norm.rvs(loc=0, scale=sigma, size=(T, S))
     z_mat = np.zeros((T, S))
 
