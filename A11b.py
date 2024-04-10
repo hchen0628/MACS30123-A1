@@ -2,7 +2,7 @@ from mpi4py import MPI
 import numpy as np
 import scipy.stats as sts
 
-# Run the simulation_model.py script to compile the module, type "python simulation_model.py" in terminal
+# Run the simulation_model.py script to compile the module, type "python simulation_health_indices.py" in terminal
 from compiled_simulation import update_health_indices  # Assuming this is the AOT compiled function
 
 comm = MPI.COMM_WORLD
