@@ -21,7 +21,7 @@ def simulate_lifetime(eps_mat, rho, mu, sigma, z_0, T, S):
     return periods_to_negative
 
 if __name__ == "__main__":
-    # Compile the numba part first
+     # Compile the numba part first
     cc.compile()
 
     # Initialize MPI
@@ -36,10 +36,10 @@ if __name__ == "__main__":
     S = 1000  # Number of lives
     T = 4160  # Number of weeks
     z_0 = mu - 3*sigma  # Starting health index below average
-    np.random.seed(0)
     
     # Only rank 0 generates the shocks and broadcasts to other processes
     if rank == 0:
+        np.random.seed(0)
         eps_mat_global = sts.norm.rvs(loc=0, scale=sigma, size=(T, S))
     else:
         eps_mat_global = np.empty((T, S), dtype=np.float64)
