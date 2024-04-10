@@ -12,4 +12,4 @@
 
 module load cuda python
 
-python3 "/home/hchen0628/MACS30123-A1/A13a.py" >> A13a.out
+python3 ./A13a.py >> A13a.out
