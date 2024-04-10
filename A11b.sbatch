@@ -10,6 +10,8 @@
 #SBATCH --mail-user=hchen0628@rcc.uchicago.edu
 #SBATCH --account=macs30123
 
+module load python mpich
+
 for i in {1..20}
 do
     mpirun -n $i "/home/hchen0628/MACS30123-A1/A11b.py" >> A11b.out
