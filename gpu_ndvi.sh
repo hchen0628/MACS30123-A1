@@ -10,6 +10,6 @@
 #SBATCH --account=macs30123
 #SBATCH --mem-per-cpu=30G  # Restrict CPU memory usage by 30G
 
-module load cuda python
+module load python/3.6
 
 python3 "123 3a.py"
