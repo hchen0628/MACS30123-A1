@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#SBATCH --job-name=run_simulations_q1
-#SBATCH -o run_simulations_q1.out
-#SBATCH -e run_simulations_q1.err
+#SBATCH --job-name=A11b
+#SBATCH -o A11b.out
+#SBATCH -e A11b.err
 #SBATCH --partition=caslake
 #SBATCH --ntasks=20
 #SBATCH --nodes=1
@@ -12,5 +12,5 @@
 
 for i in {1..20}
 do
-    mpirun -n $i 123_1b_test.py >> run_simulations_q1.out
+    mpirun -n $i A11b.py >> A11b.out
 done
