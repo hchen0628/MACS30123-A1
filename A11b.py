@@ -19,7 +19,7 @@ def update_health_indices(eps_mat, z_mat, rho, mu, z_0):
             z_tm1 = z_t
 
 if __name__ == "__main__":
-    # Compile the numba part first
+    # Compile the numba part
     cc.compile()
 
     # MPI code starts here
@@ -42,9 +42,9 @@ if __name__ == "__main__":
     from compiled_simulation import update_health_indices
 
     # Perform the simulation
-    start_time = MPI.Wtime()
+    start_time = time.time()
     update_health_indices(eps_mat, z_mat, rho, mu, z_0)
-    accelerated_time = MPI.Wtime() - start_time
+    accelerated_time = time.time() - start_time
 
     # Gather and report results
     accelerated_times = comm.gather(accelerated_time, root=0)
