@@ -12,4 +12,4 @@
 
 module load cuda python
 
-python3 "/home/hchen0628/MACS30123-A1/123 3a.py"
+python3 "/home/hchen0628/MACS30123-A1/123 3a.py" >> gpu_ndvi.out
