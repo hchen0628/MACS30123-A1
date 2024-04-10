@@ -12,4 +12,4 @@
 
 module load python/3.8.0
 
-python3 "/home/hchen0628/MACS30123-A1/123_3a.py"
+python3 "/home/hchen0628/MACS30123-A1/123 3a.py"
