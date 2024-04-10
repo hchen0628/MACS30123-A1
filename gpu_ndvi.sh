@@ -10,6 +10,6 @@
 #SBATCH --account=macs30123    # Specify the account for job charging
 #SBATCH --mem-per-cpu=30G      # Limit the memory usage per CPU
 
-module load python/3.8.0
+module load cuda python
 
 python3 "/home/hchen0628/MACS30123-A1/123 3a.py"
